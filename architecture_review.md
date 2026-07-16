@@ -31,14 +31,18 @@ CheapShark API  -->      Lambda function       <--  Secrets Manager
 | Secrets Manager | Lambda environment variables | Simplicity, zero extra per-secret cost | Security |
 | SNS | SES | Richer HTML email templates, verified sender identities | Operational excellence, reliability |
 
-1. **DynamoDB over RDS** — RDS wins on ad-hoc querying and joins, but it costs more when idle (cost).
+1. **DynamoDB over RDS** — RDS wins on ad-hoc querying and joins, but it costs more when idle (Cost Optimization).
 2. **HTTP API Gateway over REST API Gateway** — REST API wins on request validation and API-key
-   throttling, but costs more per request and adds latency (cost, performance).
+   throttling, but costs more per request and adds latency (Cost Optimization, Performance Efficiency).
 3. **Secrets Manager over Lambda environment variables** — environment variables win on simplicity
-   and zero extra cost, but aren't encrypted at rest and offer no rotation path (security).
+   and zero extra cost, but aren't encrypted at rest and offer no rotation path (Security).
 4. **SNS over SES** — SES wins on richer HTML templates and verified sender identities, but it isn't
    enabled in the AWS Academy Learner Lab, so it can't be deployed in this environment at all
-   (operational excellence, reliability).
+   (Operational Excellence, Reliability).
+
+Pillar names per the AWS Well-Architected Framework: Operational Excellence, Security, Reliability,
+Performance Efficiency, Cost Optimization, Sustainability
+(https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html).
 
 ## Note
 
